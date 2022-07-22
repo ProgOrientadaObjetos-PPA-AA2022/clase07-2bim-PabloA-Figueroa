@@ -1,3 +1,4 @@
+
 package paquete1;
 
 import java.lang.reflect.Field;
@@ -37,7 +38,7 @@ public class DocenteTest {
             IllegalArgumentException, 
             IllegalAccessException {
         System.out.println("establecerNombres");
-        String nom = "rené";
+        String nom = "René";
         instance.establecerNombres(nom);
         Field field = instance.getClass().getDeclaredField("nombres");
         field.setAccessible(true);
@@ -49,7 +50,7 @@ public class DocenteTest {
         System.out.println("obtenerNombres");
         String nom = "René";
         instance.establecerNombres(nom);
-        assertEquals(instance.obtenerNombres(), "René");
+        assertEquals(instance.obtenerNombres(), "rené");
     }
 
     
